@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Selector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Plant Disease Detection</h1>
+        <div class="upload-box">
+            <input type="file" id="imageUpload" accept="image/*"/>
+            <label for="imageUpload">Upload Image</label>
+            <img id="uploadedImage" style="max-width: 20%; display: none; margin-top: 20px;" />
+        </div>
+        <div class="dropdown">
+            <select id="leafType">
+                <option value="">Select Leaf disease type</option>
+                <option value="Red Dot">Red Dot</option>
+                <option value="Bacterial Blight">Bacterial Blight<option>
+                <option value="Healthy">Healthy</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('imageUpload').addEventListener('change', function(event) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const uploadedImage = document.getElementById('uploadedImage');
+                uploadedImage.src = e.target.result;
+                uploadedImage.style.display = 'block';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        });
+    </script>
+</body>
+</html>

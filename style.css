@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("field.jpg");
+}
+
+.container {
+    background-color: #F2EEAB;
+    padding: 100px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align content */
+    opacity: 0.8
+}
+
+.heading {
+    margin-bottom: 20px;
+}
+
+.upload-box input[type="file"] {
+    display: none;
+}
+
+.upload-box label {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #72715A;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
